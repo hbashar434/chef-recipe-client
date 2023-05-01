@@ -77,8 +77,8 @@ const Navbar = () => {
         </ul>
       </div>
       <div className="navbar-end">
-        <Link className="btn btn-info text-white text-xs md:text-lg md:font-semibold">
-          Start Applying
+        <Link className="btn btn-info text-white text-xs md:text-lg md:font-semibold normal-case">
+          Login/Logout
         </Link>
       </div>
     </div>
