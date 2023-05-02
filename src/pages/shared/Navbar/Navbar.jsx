@@ -1,5 +1,6 @@
 import React from "react";
 import { Link, NavLink } from "react-router-dom";
+import banner from "../../../assets/banner.avif";
 
 const Navbar = () => {
   return (
@@ -48,7 +49,10 @@ const Navbar = () => {
             </li>
           </ul>
         </div>
-        <Link to="/" className="normal-case text-lg md:text-3xl font-bold">
+        <Link
+          to="/"
+          className="normal-case text-info text-lg md:text-3xl font-bold"
+        >
           The Chef's Table
         </Link>
       </div>
@@ -77,6 +81,9 @@ const Navbar = () => {
         </ul>
       </div>
       <div className="navbar-end">
+        <div className="mr-6">
+          <img className="w-14 rounded-full" src={banner} />
+        </div>
         <Link className="btn btn-info text-white text-xs md:text-lg md:font-semibold normal-case">
           Login/Logout
         </Link>

@@ -9,7 +9,8 @@ const Footer = () => {
             The Chef's Table
           </span>
           <p className="text-lg">
-            Order Your <br /> Favorite Food.
+            Get your
+            <br /> Favorite Recipe.
           </p>
           <div className="mt-4 md:place-self-center md:justify-self-start cursor-pointer">
             <div className="grid grid-flow-col gap-4">
