@@ -1,8 +1,9 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-const ChefDetails = ({ person }) => {
-  const { _id, picture, name, experience, number_of_recipes, likes } = person;
+const ChefDetails = ({ singleChef }) => {
+  const { _id, picture, name, experience, number_of_recipes, likes } =
+    singleChef;
   return (
     <div className="card card-side bg-base-100 shadow-xl">
       <figure className="w-48">
