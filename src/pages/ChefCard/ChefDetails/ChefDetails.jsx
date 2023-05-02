@@ -14,7 +14,7 @@ const ChefDetails = ({ person }) => {
         <p>Recipes : {number_of_recipes} items</p>
         <p>Likes : {likes}</p>
         <div className="card-actions">
-          <Link to={`/recipe${_id}`}>
+          <Link to={`/${_id}`}>
             <button className="btn btn-info text-xs text-white normal-case">
               View Recipes
             </button>
