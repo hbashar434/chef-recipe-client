@@ -6,8 +6,8 @@ const ChefDetails = ({ singleChef }) => {
     singleChef;
   return (
     <div className="card card-side bg-base-100 shadow-xl">
-      <figure className="w-48">
-        <img src={picture} alt="chefMan" />
+      <figure>
+        <img className="w-48 h-64" src={picture} alt="chefMan" />
       </figure>
       <div className="card-body">
         <h2 className="card-title">{name}</h2>

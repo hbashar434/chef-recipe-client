@@ -9,7 +9,7 @@ const ChefInfo = ({ data }) => {
         <div>
           <h1 className="text-5xl font-bold">{name}</h1>
           <p className="py-3 font-semibold">{bio}</p>
-          <p className="py-1">Recipes : {number_of_recipes}</p>
+          <p className="py-1">Recipes : {number_of_recipes} items</p>
           <p className="py-1">Experience : {experience} years</p>
           <p className="py-1">Likes : {likes}</p>
         </div>

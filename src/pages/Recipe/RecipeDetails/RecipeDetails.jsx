@@ -1,11 +1,11 @@
 import React from "react";
 
-const RecipeDetails = ({ data }) => {
-  console.log(data.recipes);
+const RecipeDetails = ({ recipes }) => {
+  console.log(recipes);
 
   return (
     <div>
-      <h2></h2>
+      <h2>ertyuiertyu</h2>
     </div>
   );
 };

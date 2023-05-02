@@ -5,13 +5,14 @@ import RecipeDetails from "./RecipeDetails/RecipeDetails";
 
 const Recipe = () => {
   const data = useLoaderData();
+  const recipe = data.recipes;
 
   return (
     <div>
       <ChefInfo data={data}></ChefInfo>
-      {data.recipes.map((idx, recipes) => {
-        <RecipeDetails key={idx} recipes={recipes}></RecipeDetails>;
-      })}
+      {recipe.map((recipes, idx) => (
+        <RecipeDetails key={idx} recipes={recipes}></RecipeDetails>
+      ))}
     </div>
   );
 };
