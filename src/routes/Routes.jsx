@@ -6,6 +6,7 @@ import Recipe from "../pages/Recipe/Recipe";
 import ErrorPage from "../pages/shared/ErrorPage/ErrorPage";
 import Login from "../pages/shared/Login/Login";
 import Register from "../pages/shared/Register/Register";
+import PrivateRoute from "./PrivateRoute";
 
 const router = createBrowserRouter([
   {
@@ -19,7 +20,11 @@ const router = createBrowserRouter([
       },
       {
         path: ":id",
-        element: <Recipe></Recipe>,
+        element: (
+          <PrivateRoute>
+            <Recipe></Recipe>
+          </PrivateRoute>
+        ),
         loader: ({ params }) =>
           fetch(`https://chef-recipe-server-psi.vercel.app/chefs/${params.id}`),
       },
