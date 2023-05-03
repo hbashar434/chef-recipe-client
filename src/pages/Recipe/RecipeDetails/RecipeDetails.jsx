@@ -8,7 +8,15 @@ const RecipeDetails = ({ recipes }) => {
   const [favorite, setFavorite] = useState(true);
   const handleFavorite = () => {
     setFavorite(false);
-    toast.success("The Recipe is your Favorite");
+    toast.success("The Recipe is your Favorite", {
+      style: {
+        backgroundColor: "#FF8400",
+        height: "6rem",
+        width: "20rem",
+        fontSize: "20px",
+        color: "white",
+      },
+    });
   };
 
   const CustomStar = (
@@ -72,7 +80,7 @@ const RecipeDetails = ({ recipes }) => {
             !favorite ? "btn-disabled" : "bg-orange-500"
           }`}
         >
-         Add to Favorite
+          Add to Favorite
         </button>
         <Toaster />
       </div>
