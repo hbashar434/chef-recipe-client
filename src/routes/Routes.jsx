@@ -4,7 +4,8 @@ import Blog from "../pages/Blog/Blog";
 import HomeLayout from "../layout/HomeLayout";
 import Recipe from "../pages/Recipe/Recipe";
 import ErrorPage from "../pages/shared/ErrorPage/ErrorPage";
-import Loading from "../pages/shared/Loading/Loading";
+import Login from "../pages/shared/Login/Login";
+import Register from "../pages/shared/Register/Register";
 
 const router = createBrowserRouter([
   {
@@ -17,14 +18,22 @@ const router = createBrowserRouter([
         element: <HomeLayout></HomeLayout>,
       },
       {
-        path: "/blog",
-        element: <Blog></Blog>,
-      },
-      {
         path: ":id",
         element: <Recipe></Recipe>,
         loader: ({ params }) =>
           fetch(`https://chef-recipe-server-psi.vercel.app/chefs/${params.id}`),
+      },
+      {
+        path: "/blog",
+        element: <Blog></Blog>,
+      },
+      {
+        path: "/login",
+        element: <Login></Login>,
+      },
+      {
+        path: "/register",
+        element: <Register></Register>,
       },
     ],
   },

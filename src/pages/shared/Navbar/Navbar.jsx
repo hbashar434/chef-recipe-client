@@ -3,6 +3,7 @@ import { Link, NavLink } from "react-router-dom";
 import banner from "../../../assets/banner.avif";
 
 const Navbar = () => {
+  const user = null;
   return (
     <div className="mx-8 md:mx-16 lg:mx-24">
       <div className="navbar">
@@ -82,12 +83,21 @@ const Navbar = () => {
           </ul>
         </div>
         <div className="navbar-end">
-          <div className="mr-6">
-            <img className="w-14 rounded-full" src={banner} />
-          </div>
-          <Link className="btn bg-orange-500 hover:bg-orange-600 border-none text-white text-xs md:text-lg md:font-semibold normal-case">
-            Login/Logout
-          </Link>
+          {user ? (
+            <div className=" flex gap-4">
+              <img className="w-14 rounded-full" src={banner} />
+              <Link
+                to="/login"
+                className="btn bg-orange-500 hover:bg-orange-600 border-none text-white text-xs md:text-lg md:font-semibold normal-case"
+              >
+                Login
+              </Link>
+            </div>
+          ) : (
+            <Link className="btn bg-orange-500 hover:bg-orange-600 border-none text-white text-xs md:text-lg md:font-semibold normal-case">
+              Logout
+            </Link>
+          )}
         </div>
       </div>
     </div>
