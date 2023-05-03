@@ -22,6 +22,7 @@ const Register = () => {
         createProfile(name, photo)
           .then(() => {
             console.log("profile updated");
+            form.reset();
           })
           .catch((error) => {
             const errorMessage = error.message;
