@@ -14,7 +14,7 @@ const Banner = () => {
           <h1 className="mb-5 text-4xl font-bold">
             Learn how to make your favorite restaurant’s dishes.
           </h1>
-          <button className="btn btn-info text-white font-bold normal-case">
+          <button className="btn bg-orange-500 hover:bg-orange-600 border-none text-white font-bold normal-case">
             Book a Table
           </button>
         </div>

@@ -1,4 +1,5 @@
 import React from "react";
+import { FaThumbsUp } from "react-icons/fa";
 
 const ChefInfo = ({ data }) => {
   const { picture, name, bio, experience, number_of_recipes, likes } = data;
@@ -11,7 +12,11 @@ const ChefInfo = ({ data }) => {
           <p className="py-3 text-2xl font-semibold">{bio}</p>
           <p className="py-1 text-xl">Recipes : {number_of_recipes} items</p>
           <p className="py-1 text-xl">Experience : {experience} years</p>
-          <p className="py-1 text-xl">Likes : {likes}</p>
+          <p className="py-1 text-xl flex items-center">
+            {" "}
+            <FaThumbsUp className="text-orange-500 border-none mr-2 w-6 h-6"></FaThumbsUp>{" "}
+            {likes}
+          </p>
         </div>
       </div>
     </div>

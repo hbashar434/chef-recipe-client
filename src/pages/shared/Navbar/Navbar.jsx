@@ -51,7 +51,7 @@ const Navbar = () => {
         </div>
         <Link
           to="/"
-          className="normal-case text-info text-lg md:text-3xl font-bold"
+          className="normal-case text-orange-500 border-none text-lg md:text-3xl font-bold"
         >
           The Chef's Table
         </Link>
@@ -84,7 +84,7 @@ const Navbar = () => {
         <div className="mr-6">
           <img className="w-14 rounded-full" src={banner} />
         </div>
-        <Link className="btn btn-info text-white text-xs md:text-lg md:font-semibold normal-case">
+        <Link className="btn bg-orange-500 hover:bg-orange-600 border-none text-white text-xs md:text-lg md:font-semibold normal-case">
           Login/Logout
         </Link>
       </div>

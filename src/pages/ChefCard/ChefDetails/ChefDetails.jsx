@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { FaThumbsUp } from "react-icons/fa";
 
 const ChefDetails = ({ singleChef }) => {
   const { _id, picture, name, experience, number_of_recipes, likes } =
@@ -13,10 +14,14 @@ const ChefDetails = ({ singleChef }) => {
         <h2 className="card-title">{name}</h2>
         <p>Experience : {experience} years</p>
         <p>Recipes : {number_of_recipes} items</p>
-        <p>Likes : {likes}</p>
+        <p className="flex items-center">
+          {" "}
+          <FaThumbsUp className="text-orange-400 mr-2 w-4 h-4"></FaThumbsUp>{" "}
+          {likes}
+        </p>
         <div className="card-actions">
           <Link to={`/${_id}`}>
-            <button className="btn btn-info text-xs text-white normal-case">
+            <button className="btn bg-orange-500 hover:bg-orange-600 border-none text-xs text-white normal-case">
               View Recipes
             </button>
           </Link>

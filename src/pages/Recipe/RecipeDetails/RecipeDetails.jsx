@@ -17,10 +17,10 @@ const RecipeDetails = ({ recipes }) => {
   const myStyles = {
     itemShapes: CustomStar,
     itemStrokeWidth: 2,
-    activeFillColor: "LightSeaGreen",
-    activeStrokeColor: "#99F6E4",
-    inactiveFillColor: "#99F6E4",
-    inactiveStrokeColor: "LightSeaGreen",
+    activeFillColor: "rgb(249 115 22)",
+    activeStrokeColor: "#F5EA5A",
+    inactiveFillColor: "#F5EA5A",
+    inactiveStrokeColor: "rgb(249 115 22)",
   };
 
   return (
@@ -36,12 +36,12 @@ const RecipeDetails = ({ recipes }) => {
         <div className="grid items-center">
           <div className="card-body">
             <h2 className="card-title text-3xl">Recipe name : {recipe_name}</h2>
-            <div className="flex justify-between mt-4">
+            <div className="flex mt-4">
               <p className="text-3xl mr-8">Ingredients: </p>
-              <div className="grid md:grid-cols-3">
+              <div className="grid md:grid-cols-2 lg:grid-cols-3">
                 {ingredients?.map((ing, idx) => (
                   <button
-                    className="btn btn-outline btn-info mr-2 mb-2"
+                    className="btn btn-outline border-orange-500 hover:bg-orange-600 hover:border-orange-600 mr-2 mb-2"
                     key={idx}
                   >
                     {ing}
@@ -68,11 +68,11 @@ const RecipeDetails = ({ recipes }) => {
       <div className="card-actions justify-end mt-4">
         <button
           onClick={handleFavorite}
-          className={`btn btn-info md:btn-wide text-white lg:text-xl normal-case ${
-            !favorite ? "btn-disabled" : ""
+          className={`btn  hover:bg-orange-600 border-none md:btn-wide text-white lg:text-xl normal-case ${
+            !favorite ? "btn-disabled" : "bg-orange-500"
           }`}
         >
-          Favorite
+         Add to Favorite
         </button>
         <Toaster />
       </div>
