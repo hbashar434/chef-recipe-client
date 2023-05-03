@@ -1,9 +1,11 @@
-import React, { useContext } from "react";
+import React, { useContext, useState } from "react";
 import { Link } from "react-router-dom";
 import { AuthContext } from "../../../providers/AuthProvider";
 
 const Login = () => {
   const { signIn } = useContext(AuthContext);
+
+  const [error, setError] = useState("");
 
   const handleLogin = (e) => {
     e.preventDefault();
@@ -11,7 +13,7 @@ const Login = () => {
     const email = form.email.value;
     const password = form.password.value;
 
-    console.log(email, password);
+    setError("");
 
     signIn(email, password)
       .then((result) => {
@@ -21,6 +23,7 @@ const Login = () => {
       })
       .catch((error) => {
         const errorMessage = error.message;
+        setError(errorMessage)
       });
   };
   return (
@@ -49,10 +52,12 @@ const Login = () => {
               <input
                 type="password"
                 name="password"
+                required
                 placeholder="password"
                 className="input input-bordered"
               />
             </div>
+            <p className="text-error">{error}</p>
             <div className="form-control mt-6">
               <button className="btn btn-primary">Login</button>
             </div>
