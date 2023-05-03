@@ -4,7 +4,7 @@ import { AuthContext } from "../../../providers/AuthProvider";
 
 const Register = () => {
   const { createUser, createProfile } = useContext(AuthContext);
-  const [emailError, setEmailError] = useState("");
+  const [error, setError] = useState("");
   const [passwordError, setPasswordError] = useState("");
 
   const handleSubmit = (e) => {
@@ -14,9 +14,9 @@ const Register = () => {
     const photo = form.photo.value;
     const email = form.email.value;
     const password = form.password.value;
-    console.log(email, password);
-    setEmailError(" ");
+
     setPasswordError(" ");
+    setError(" ");
 
     if (emailError) {
       e.target.email.focus();
@@ -26,33 +26,16 @@ const Register = () => {
       return;
     }
 
-    if (
-      !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(
-        email
-      )
-    ) {
-      setEmailError("Please provide a valid email");
-      return;
-    }
-
     if (password.length < 6) {
       setPasswordError("Password must be at least 6 characters long");
-      return;
-    } else if (!/(?=.*[A-Z])/.test(password)) {
-      setPasswordError("Password must contain at least one capital letter");
-      return;
-    } else if (!/(?=.*\d)/.test(password)) {
-      setPasswordError("Password must contain at least one digit");
       return;
     }
 
     createUser(email, password)
       .then((result) => {
         const createdUser = result.user;
-        console.log(createdUser);
         createProfile(name, photo)
           .then(() => {
-            console.log("profile updated");
             form.reset();
           })
           .catch((error) => {
@@ -61,6 +44,7 @@ const Register = () => {
       })
       .catch((error) => {
         const errorMessage = error.message;
+        setError(errorMessage);
       });
   };
 
@@ -106,7 +90,6 @@ const Register = () => {
                 required
                 className="input input-bordered"
               />
-              <p className="text-error">{emailError}</p>
             </div>
             <div className="form-control">
               <label className="label">
@@ -121,8 +104,9 @@ const Register = () => {
               />
               <p className=" text-error">{passwordError}</p>
             </div>
+            <p className="text-error">{error}</p>
             <div className="form-control mt-6">
-              <button className="btn btn-primary">Login</button>
+              <button className="btn bg-orange-400 border-none hover:bg-orange-500">Login</button>
             </div>
             <label className="label">
               <Link to="/login" className="label-text-alt link link-hover">

@@ -8,13 +8,9 @@ const Navbar = () => {
 
   const handleLogOut = () => {
     logOut()
-      .then(() => {
-        console.log("successfully logout");
-      })
+      .then(() => {})
       .catch((error) => {
         const errorMessage = error.message;
-
-        console.log(errorMessage);
       });
   };
 

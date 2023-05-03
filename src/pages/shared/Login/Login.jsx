@@ -3,7 +3,7 @@ import { Link, useLocation, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../../providers/AuthProvider";
 
 const Login = () => {
-  const { signIn } = useContext(AuthContext);
+  const { signIn, signInWithGoogle } = useContext(AuthContext);
   const [error, setError] = useState("");
   const navigate = useNavigate();
   const location = useLocation();
@@ -20,9 +20,20 @@ const Login = () => {
     signIn(email, password)
       .then((result) => {
         const loggedUser = result.user;
-        console.log(loggedUser);
         navigate(from, { replace: true });
         form.reset();
+      })
+      .catch((error) => {
+        const errorMessage = error.message;
+        setError(errorMessage);
+      });
+  };
+
+  const handleGoogleSignIn = () => {
+    signInWithGoogle()
+      .then((result) => {
+        const loggedUser = result.user;
+        navigate(from, { replace: true });
       })
       .catch((error) => {
         const errorMessage = error.message;
@@ -62,8 +73,19 @@ const Login = () => {
             </div>
             <p className="text-error">{error}</p>
             <div className="form-control mt-6">
-              <button className="btn btn-primary">Login</button>
+              <button className="btn bg-orange-400 border-none hover:bg-orange-500">
+                Login
+              </button>
             </div>
+            <button
+              onClick={handleGoogleSignIn}
+              className="btn btn-outline border-orange-500 hover:bg-orange-500 hover:border-none"
+            >
+              Sign In With Google
+            </button>
+            <button className="btn btn-outline border-orange-500 hover:bg-orange-500 hover:border-none">
+              Sign In With Github
+            </button>
             <label className="label">
               <Link to="/register" className="label-text-alt link link-hover">
                 New to Chef's Table? Create An Account
