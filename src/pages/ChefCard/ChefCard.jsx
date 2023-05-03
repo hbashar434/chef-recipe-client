@@ -16,7 +16,7 @@ const ChefCard = () => {
   }, []);
   return (
     <div className="bg-base-200">
-      <div className="px-8 py-12 md:py-24 grid justify-center gap-6 md:grid-cols-2 lg:grid-cols-3">
+      <div className="px-8 py-12 md:py-32 grid justify-center gap-6 md:grid-cols-2 lg:grid-cols-3">
         {chef.map((singleChef) => (
           <ChefDetails
             key={singleChef._id}

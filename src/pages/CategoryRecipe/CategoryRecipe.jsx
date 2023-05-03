@@ -1,5 +1,5 @@
 import React from "react";
-import { FaArrowRight } from "react-icons/fa";
+import {BsBoxArrowInUpRight} from 'react-icons/bs'
 
 const category = [
   {
@@ -34,7 +34,7 @@ const CategoryRecipe = () => {
                 <img
                   src={ct.image}
                   alt="Shoes"
-                  className="rounded-xl object-cover w-48"
+                  className="rounded-xl object-cover w-32"
                 />
               </figure>
               <div className="card-body items-center text-center">
@@ -44,9 +44,9 @@ const CategoryRecipe = () => {
               </div>
               {/* new sec */}
               <div className="card bg-black text-gray-300 bg-opacity-75 absolute inset-0 opacity-0 hover:opacity-100 transition-opacity duration-300">
-                <button className=" btn m-auto text-3xl font-semibold ">
+                <button className="m-auto text-3xl font-semibold ">
                   <span className="flex items-center">
-                    <p className="text-orange-500 mr-2">See more</p> <FaArrowRight></FaArrowRight>
+                    <p className="text-orange-500 mr-2">Visit</p> <BsBoxArrowInUpRight></BsBoxArrowInUpRight>
                   </span>
                 </button>
               </div>
