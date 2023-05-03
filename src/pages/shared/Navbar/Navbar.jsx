@@ -1,9 +1,23 @@
-import React from "react";
+import React, { useContext } from "react";
 import { Link, NavLink } from "react-router-dom";
 import banner from "../../../assets/banner.avif";
+import { AuthContext } from "../../../providers/AuthProvider";
 
 const Navbar = () => {
-  const user = null;
+  const { user, logOut } = useContext(AuthContext);
+
+  const handleLogOut = () => {
+    logOut()
+      .then(() => {
+        console.log("successfully logout");
+      })
+      .catch((error) => {
+        const errorMessage = error.message;
+
+        console.log(errorMessage);
+      });
+  };
+
   return (
     <div className="mx-8 md:mx-16 lg:mx-24">
       <div className="navbar">
@@ -85,17 +99,24 @@ const Navbar = () => {
         <div className="navbar-end">
           {user ? (
             <div className=" flex gap-4">
-              <img className="w-14 rounded-full" src={banner} />
+              <img
+                className="w-14 rounded-full"
+                title={user?.displayName}
+                src={user?.photoURL}
+              />
               <Link
-                to="/login"
+                onClick={handleLogOut}
                 className="btn bg-orange-500 hover:bg-orange-600 border-none text-white text-xs md:text-lg md:font-semibold normal-case"
               >
-                Login
+                Logout
               </Link>
             </div>
           ) : (
-            <Link className="btn bg-orange-500 hover:bg-orange-600 border-none text-white text-xs md:text-lg md:font-semibold normal-case">
-              Logout
+            <Link
+              to="/login"
+              className="btn bg-orange-500 hover:bg-orange-600 border-none text-white text-xs md:text-lg md:font-semibold normal-case"
+            >
+              Login
             </Link>
           )}
         </div>
