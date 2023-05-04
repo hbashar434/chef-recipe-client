@@ -1,8 +1,7 @@
 import React from "react";
 import { FaFilePdf } from "react-icons/fa";
-import { PDFDownloadLink, PDFViewer } from "@react-pdf/renderer";
+import { PDFDownloadLink } from "@react-pdf/renderer";
 import MyDocument from "./MyDocument";
-import Loading from "../shared/Loading/Loading";
 
 const data = [
   {
@@ -38,7 +37,9 @@ const Blog = () => {
       <h1 className="font-bold text-4xl my-16 text-center">Blog</h1>
       <div className=" flex justify-end pb-8 pr-8">
         <PDFDownloadLink document={<MyDocument />} fileName="blog.pdf">
-          {({ loading }) => (loading ? <Loading /> : <FaFilePdf size={'40px'} />)}
+          {({ loading }) =>
+            loading ? "Loading..." : <FaFilePdf size={"40px"} />
+          }
         </PDFDownloadLink>
       </div>
       <div>
@@ -48,10 +49,10 @@ const Blog = () => {
             className="collapse collapse-arrow group"
             key={blog.id}
           >
-            <div className="collapse-title text-black bg-orange-300 rounded-xl text-3xl group-focus:bg-orange-400 group-focus:text-secondary-content">
+            <div className="collapse-title text-black bg-blue-500 rounded-xl text-3xl group-focus:bg-blue-500 group-focus:text-secondary-content">
               {blog.question}
             </div>
-            <div className="collapse-content mt-2 group-focus:mb-8 bg-orange-400 text-black text-lg group-focus:bg-orange-400 rounded-xl group-focus:text-black group-focus:p-6">
+            <div className="collapse-content mt-2 group-focus:mb-8 bg-blue-500 text-black text-lg group-focus:bg-blue-500 rounded-xl group-focus:text-black group-focus:p-6">
               {blog.answer}
             </div>
           </div>

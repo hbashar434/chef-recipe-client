@@ -28,7 +28,7 @@ const Login = () => {
       })
       .catch((error) => {
         const errorMessage = error.message;
-        setError(errorMessage);
+        setError("User-not-found: email and password doesn't match");
       });
   };
 
@@ -40,7 +40,7 @@ const Login = () => {
       })
       .catch((error) => {
         const errorMessage = error.message;
-        setError(errorMessage);
+        setError("Failed to login, try again");
       });
   };
 
@@ -52,7 +52,8 @@ const Login = () => {
       })
       .catch((error) => {
         const errorMessage = error.message;
-        setError(errorMessage);
+        console.log(errorMessage);
+        setError("Failed to login, try again");
       });
   };
   return (
@@ -86,15 +87,15 @@ const Login = () => {
                 className="input input-bordered"
               />
             </div>
-            <p className="text-error">{error}</p>
+            <p className="text-error text-sm">{error}</p>
             <div className="form-control mt-6">
-              <button className="btn bg-orange-400 border-none hover:bg-orange-300">
+              <button className="btn bg-blue-500 border-none hover:bg-blue-500">
                 Login
               </button>
             </div>
             <button
               onClick={handleGoogleSignIn}
-              className="btn btn-outline border-orange-300 hover:bg-orange-300 hover:border-none"
+              className="btn btn-outline border-blue-500 hover:bg-blue-500 hover:border-none"
             >
               {" "}
               <span className="mr-2">
@@ -104,7 +105,7 @@ const Login = () => {
             </button>
             <button
               onClick={handleGithubSignIn}
-              className="btn btn-outline border-orange-300 hover:bg-orange-300 hover:border-none"
+              className="btn btn-outline border-blue-500 hover:bg-blue-500 hover:border-none"
             >
               {" "}
               <span className="mr-2">
@@ -113,7 +114,10 @@ const Login = () => {
               Sign In With Github
             </button>
             <label className="label">
-              <Link to="/register" className="label-text-alt link link-hover">
+              <Link
+                to="/register"
+                className="label-text-alt link link-hover text-sm font-semibold"
+              >
                 New to Chef's Table? Create An Account
               </Link>
             </label>

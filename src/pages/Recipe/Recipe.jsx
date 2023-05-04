@@ -2,15 +2,8 @@ import React from "react";
 import { useLoaderData, useNavigation } from "react-router-dom";
 import ChefInfo from "./ChefInfo/ChefInfo";
 import RecipeDetails from "./RecipeDetails/RecipeDetails";
-import Loading from "../shared/Loading/Loading";
-import { useState } from "react";
 
 const Recipe = () => {
-  const navigation = useNavigation();
-
-  if (navigation.state === "loading") {
-    return <Loading></Loading>;
-  }
   const data = useLoaderData();
   const recipe = data.recipes;
 

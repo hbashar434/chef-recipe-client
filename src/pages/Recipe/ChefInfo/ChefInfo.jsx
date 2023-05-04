@@ -10,11 +10,16 @@ const ChefInfo = ({ data }) => {
         <div>
           <h1 className="text-5xl font-bold">{name}</h1>
           <p className="py-3 text-2xl font-semibold">{bio}</p>
-          <p className="py-1 text-xl">Recipes : {number_of_recipes} items</p>
-          <p className="py-1 text-xl">Experience : {experience} years</p>
-          <p className="py-1 text-xl flex items-center">
+          <p>
+          <span className="py-1 text-xl my-btn-green">Recipes : {number_of_recipes} items</span>
+          </p>
+          <p className="my-6">
+          <span className="py-1 text-xl my-btn-yellow">Experience : {experience} years</span>
+          </p>
+          
+          <p className="py-1 text-xl w-28 flex items-center my-btn-blue">
             {" "}
-            <FaThumbsUp className="text-orange-300 border-none mr-2 w-6 h-6"></FaThumbsUp>{" "}
+            <FaThumbsUp className="text-blue-500 border-none mr-2 w-6 h-6"></FaThumbsUp>{" "}
             {likes}
           </p>
         </div>

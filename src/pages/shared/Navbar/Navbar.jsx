@@ -1,6 +1,5 @@
 import React, { useContext } from "react";
 import { Link, NavLink } from "react-router-dom";
-import banner from "../../../assets/banner.avif";
 import { AuthContext } from "../../../providers/AuthProvider";
 
 const Navbar = () => {
@@ -37,13 +36,13 @@ const Navbar = () => {
             </label>
             <ul
               tabIndex={0}
-              className="menu menu-compact dropdown-content mt-1 p-2 shadow bg-base-100 rounded-box w-32"
+              className="menu-compact dropdown-content mt-1 p-2 shadow  bg-orange-100 rounded-box w-32"
             >
               <li>
                 <NavLink
                   to="/"
                   className={({ isActive }) =>
-                    isActive ? "text-indigo-400" : "text-gray-700"
+                    isActive ? "text-blue-500" : "text-gray-700"
                   }
                 >
                   Home
@@ -53,41 +52,61 @@ const Navbar = () => {
                 <NavLink
                   to="/blog"
                   className={({ isActive }) =>
-                    isActive ? "text-indigo-400" : "text-gray-700"
+                    isActive ? "text-blue-500" : "text-gray-700"
                   }
                 >
                   Blog
+                </NavLink>
+              </li>
+              <li>
+                <NavLink
+                  to="/about"
+                  className={({ isActive }) =>
+                    isActive ? "text-blue-500" : "text-gray-700"
+                  }
+                >
+                  About
                 </NavLink>
               </li>
             </ul>
           </div>
           <Link
             to="/"
-            className="normal-case text-orange-500 border-none text-lg md:text-3xl font-bold"
+            className="normal-case text-blue-500 border-none text-lg md:text-3xl font-bold"
           >
             The Chef's Table
           </Link>
         </div>
         <div className="navbar-center hidden lg:flex">
-          <ul className="menu menu-horizontal px-1">
-            <li className="font-semibold mr-2">
+          <ul className="menu-horizontal px-1">
+            <li className=" text-lg font-semibold mr-6">
               <NavLink
                 to="/"
                 className={({ isActive }) =>
-                  isActive ? "text-indigo-400" : "text-gray-700"
+                  isActive ? "text-blue-500" : "text-gray-600"
                 }
               >
                 Home
               </NavLink>
             </li>
-            <li className="font-semibold">
+            <li className="text-lg font-semibold mr-6">
               <NavLink
                 to="/blog"
                 className={({ isActive }) =>
-                  isActive ? "text-indigo-400" : "text-gray-700"
+                  isActive ? "text-blue-500" : "text-gray-600"
                 }
               >
                 Blog
+              </NavLink>
+            </li>
+            <li className="text-lg font-semibold">
+              <NavLink
+                to="/about"
+                className={({ isActive }) =>
+                  isActive ? "text-blue-500" : "text-gray-600"
+                }
+              >
+                About
               </NavLink>
             </li>
           </ul>
@@ -96,13 +115,13 @@ const Navbar = () => {
           {user ? (
             <div className=" flex gap-4 items-center">
               <img
-                className="w-14 h-14 rounded-full"
+                className="w-12 h-12 rounded-full"
                 title={user?.displayName}
                 src={user?.photoURL}
               />
               <Link
                 onClick={handleLogOut}
-                className="btn bg-orange-400 hover:bg-orange-500 border-none text-white text-xs md:text-lg md:font-semibold normal-case"
+                className="my-btn md:text-lg md:font-semibold normal-case"
               >
                 Logout
               </Link>
@@ -110,7 +129,7 @@ const Navbar = () => {
           ) : (
             <Link
               to="/login"
-              className="btn bg-orange-400 hover:bg-orange-500 border-none text-white text-xs md:text-lg md:font-semibold normal-case"
+              className="my-btn md:text-lg md:font-semibold normal-case"
             >
               Login
             </Link>

@@ -14,7 +14,6 @@ const Register = () => {
     const photo = form.photo.value;
     const email = form.email.value;
     const password = form.password.value;
-    console.log(email, password);
 
     setPasswordError(" ");
     setError(" ");
@@ -39,7 +38,7 @@ const Register = () => {
       })
       .catch((error) => {
         const errorMessage = error.message;
-        setError(errorMessage);
+        setError("Create account failed, try again");
       });
   };
 
@@ -97,16 +96,19 @@ const Register = () => {
                 required
                 className="input input-bordered"
               />
-              <p className=" text-error">{passwordError}</p>
+              <p className=" text-error mt-2">{passwordError}</p>
             </div>
             <p className="text-error">{error}</p>
             <div className="form-control mt-6">
-              <button className="btn bg-orange-400 border-none hover:bg-orange-300">
+              <button className="btn bg-blue-500 border-none hover:bg-blue-500">
                 Login
               </button>
             </div>
             <label className="label">
-              <Link to="/login" className="label-text-alt link link-hover">
+              <Link
+                to="/login"
+                className="label-text-alt link link-hover text-sm font-semibold"
+              >
                 Already have an account? Please Login
               </Link>
             </label>

@@ -23,7 +23,7 @@ const category = [
 const CategoryRecipe = () => {
   return (
     <div className="bg-base-200 mt-24 pb-24">
-      <h1 className="text-5xl text-center font-bold pt-12 text-orange-500">
+      <h1 className="text-5xl text-center font-bold pt-12 text-blue-500">
         Recipes By Category
       </h1>
       <div className="grid justify-center lg:grid-cols-4 gap-4 px-12">
@@ -38,7 +38,7 @@ const CategoryRecipe = () => {
                 />
               </figure>
               <div className="card-body items-center text-center">
-                <h2 className="card-title text-5xl  text-orange-700">
+                <h2 className="card-title text-5xl  text-blue-500">
                   {ct.name}
                 </h2>
               </div>
@@ -46,7 +46,7 @@ const CategoryRecipe = () => {
               <div className="card bg-black text-gray-300 bg-opacity-75 absolute inset-0 opacity-0 hover:opacity-100 transition-opacity duration-300">
                 <button className="m-auto text-3xl font-semibold ">
                   <span className="flex items-center">
-                    <p className="text-orange-300 mr-2">Visit</p>{" "}
+                    <p className="text-white mr-2">Visit</p>{" "}
                     <BsBoxArrowInUpRight></BsBoxArrowInUpRight>
                   </span>
                 </button>

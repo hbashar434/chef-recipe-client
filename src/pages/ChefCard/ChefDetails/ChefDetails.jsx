@@ -2,7 +2,6 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { FaThumbsUp } from "react-icons/fa";
 import LazyLoad from "react-lazy-load";
-import LazyLoading from "../../shared/LazyLoading/LazyLoading";
 
 const ChefDetails = ({ singleChef }) => {
   const { _id, picture, name, experience, number_of_recipes, likes } =
@@ -10,7 +9,7 @@ const ChefDetails = ({ singleChef }) => {
   return (
     <div className="card card-side bg-base-100 shadow-xl">
       <figure>
-        <LazyLoad offset={500} once>
+        <LazyLoad offset={300} once>
           <img className="w-48 h-64" src={picture} alt="chef Man" />
         </LazyLoad>
       </figure>
@@ -20,12 +19,12 @@ const ChefDetails = ({ singleChef }) => {
         <p>Recipes : {number_of_recipes} items</p>
         <p className="flex items-center">
           {" "}
-          <FaThumbsUp className="text-orange-400 mr-2 w-4 h-4"></FaThumbsUp>{" "}
+          <FaThumbsUp size={'20px'} className="text-blue-500 mr-2"></FaThumbsUp>{" "}
           {likes}
         </p>
         <div className="card-actions">
           <Link to={`/chefs/${_id}`}>
-            <button className="btn bg-orange-300 hover:bg-orange-400 border-none text-xs text-white normal-case">
+            <button className="my-btn normal-case">
               View Recipes
             </button>
           </Link>

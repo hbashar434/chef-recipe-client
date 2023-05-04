@@ -10,7 +10,7 @@ const RecipeDetails = ({ recipes }) => {
     setFavorite(false);
     toast.success("The Recipe is your Favorite", {
       style: {
-        backgroundColor: "#F6BA6F",
+        backgroundColor: "#05BFDB",
         height: "6rem",
         width: "20rem",
         fontSize: "20px",
@@ -46,10 +46,10 @@ const RecipeDetails = ({ recipes }) => {
             <h2 className="card-title text-3xl">Recipe name : {recipe_name}</h2>
             <div className="flex mt-4">
               <p className="text-3xl mr-8">Ingredients: </p>
-              <div className="grid md:grid-cols-2 lg:grid-cols-3">
+              <div>
                 {ingredients?.map((ing, idx) => (
                   <button
-                    className="btn btn-outline border-orange-300 hover:bg-orange-400 hover:border-orange-400 mr-2 mb-2"
+                    className="my-btn-blue"
                     key={idx}
                   >
                     {ing}
@@ -76,8 +76,8 @@ const RecipeDetails = ({ recipes }) => {
       <div className="card-actions justify-end mt-4">
         <button
           onClick={handleFavorite}
-          className={`btn  hover:bg-orange-400 border-none md:btn-wide text-white lg:text-xl normal-case ${
-            !favorite ? "btn-disabled" : "bg-orange-300"
+          className={`btn border-none text-lg normal-case ${
+            !favorite ? "btn-disabled" : "my-btn"
           }`}
         >
           Add to Favorite
