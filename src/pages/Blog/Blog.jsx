@@ -33,12 +33,16 @@ const data = [
 
 const Blog = () => {
   return (
-    <div className="px-6 md:px-10 lg:px-16 py-12 bg-base-200">
-      <h1 className="font-bold text-4xl my-16 text-center">Blog</h1>
-      <div className=" flex justify-end pb-8 pr-8">
+    <div className="px-6 md:px-10 lg:px-16 pt-2 pb-20 bg-base-200">
+      <h1 className="font-bold text-4xl my-8 text-center">Blog</h1>
+      <div className=" flex justify-end pb-4 pr-8">
         <PDFDownloadLink document={<MyDocument />} fileName="blog.pdf">
           {({ loading }) =>
-            loading ? "Loading..." : <FaFilePdf size={"40px"} />
+            loading ? (
+              "Loading..."
+            ) : (
+              <FaFilePdf title="download" size={"40px"} />
+            )
           }
         </PDFDownloadLink>
       </div>
@@ -49,10 +53,10 @@ const Blog = () => {
             className="collapse collapse-arrow group"
             key={blog.id}
           >
-            <div className="collapse-title text-black bg-blue-500 rounded-xl text-3xl group-focus:bg-blue-500 group-focus:text-secondary-content">
+            <div className="collapse-title text-black bg-blue-100 rounded-xl text-3xl group-focus:bg-blue-200">
               {blog.question}
             </div>
-            <div className="collapse-content mt-2 group-focus:mb-8 bg-blue-500 text-black text-lg group-focus:bg-blue-500 rounded-xl group-focus:text-black group-focus:p-6">
+            <div className="collapse-content mt-2 group-focus:mb-8 bg-blue-100 text-black text-lg group-focus:bg-blue-200 rounded-xl group-focus:p-6">
               {blog.answer}
             </div>
           </div>
