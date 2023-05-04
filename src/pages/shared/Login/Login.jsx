@@ -1,6 +1,8 @@
 import React, { useContext, useState } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../../providers/AuthProvider";
+import { FcGoogle } from "react-icons/fc";
+import { BsGithub } from "react-icons/bs";
 
 const Login = () => {
   const { signIn, signInWithGoogle, signInWithGithub } =
@@ -94,12 +96,20 @@ const Login = () => {
               onClick={handleGoogleSignIn}
               className="btn btn-outline border-orange-300 hover:bg-orange-300 hover:border-none"
             >
+              {" "}
+              <span className="mr-2">
+                <FcGoogle size={"30px"}></FcGoogle>
+              </span>
               Sign In With Google
             </button>
             <button
               onClick={handleGithubSignIn}
               className="btn btn-outline border-orange-300 hover:bg-orange-300 hover:border-none"
             >
+              {" "}
+              <span className="mr-2">
+                <BsGithub size={"30px"}></BsGithub>
+              </span>
               Sign In With Github
             </button>
             <label className="label">

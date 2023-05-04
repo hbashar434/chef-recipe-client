@@ -10,7 +10,7 @@ const RecipeDetails = ({ recipes }) => {
     setFavorite(false);
     toast.success("The Recipe is your Favorite", {
       style: {
-        backgroundColor: "#FF8400",
+        backgroundColor: "#F6BA6F",
         height: "6rem",
         width: "20rem",
         fontSize: "20px",
