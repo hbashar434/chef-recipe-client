@@ -5,7 +5,7 @@ const Footer = () => {
     <div>
       <footer className="footer p-10 md:pl-36 bg-base-200 text-base-content">
         <div>
-          <span className="text-2xl font-bold text-gray-600">
+          <span className="text-2xl font-bold text-gray-400">
             The Chef's Table
           </span>
           <p className="text-lg">

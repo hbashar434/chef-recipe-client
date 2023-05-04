@@ -21,7 +21,7 @@ const ChefDetails = ({ singleChef }) => {
         </p>
         <div className="card-actions">
           <Link to={`/${_id}`}>
-            <button className="btn bg-orange-500 hover:bg-orange-600 border-none text-xs text-white normal-case">
+            <button className="btn bg-orange-300 hover:bg-orange-400 border-none text-xs text-white normal-case">
               View Recipes
             </button>
           </Link>

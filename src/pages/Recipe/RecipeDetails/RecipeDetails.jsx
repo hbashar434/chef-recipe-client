@@ -49,7 +49,7 @@ const RecipeDetails = ({ recipes }) => {
               <div className="grid md:grid-cols-2 lg:grid-cols-3">
                 {ingredients?.map((ing, idx) => (
                   <button
-                    className="btn btn-outline border-orange-500 hover:bg-orange-600 hover:border-orange-600 mr-2 mb-2"
+                    className="btn btn-outline border-orange-300 hover:bg-orange-400 hover:border-orange-400 mr-2 mb-2"
                     key={idx}
                   >
                     {ing}
@@ -76,8 +76,8 @@ const RecipeDetails = ({ recipes }) => {
       <div className="card-actions justify-end mt-4">
         <button
           onClick={handleFavorite}
-          className={`btn  hover:bg-orange-600 border-none md:btn-wide text-white lg:text-xl normal-case ${
-            !favorite ? "btn-disabled" : "bg-orange-500"
+          className={`btn  hover:bg-orange-400 border-none md:btn-wide text-white lg:text-xl normal-case ${
+            !favorite ? "btn-disabled" : "bg-orange-300"
           }`}
         >
           Add to Favorite

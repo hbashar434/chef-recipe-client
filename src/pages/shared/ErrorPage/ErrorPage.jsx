@@ -11,7 +11,7 @@ const ErrorPage = () => {
         alt="error image"
       />
       <Link to="/" className="text-center">
-        <button className="btn bg-orange-500 border-none hover:bg-orange-600 normal-case text-lg">
+        <button className="btn bg-orange-300 border-none hover:bg-orange-400 normal-case text-lg">
           Back to Home
         </button>
       </Link>

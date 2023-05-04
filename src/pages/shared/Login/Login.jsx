@@ -86,19 +86,19 @@ const Login = () => {
             </div>
             <p className="text-error">{error}</p>
             <div className="form-control mt-6">
-              <button className="btn bg-orange-400 border-none hover:bg-orange-500">
+              <button className="btn bg-orange-400 border-none hover:bg-orange-300">
                 Login
               </button>
             </div>
             <button
               onClick={handleGoogleSignIn}
-              className="btn btn-outline border-orange-500 hover:bg-orange-500 hover:border-none"
+              className="btn btn-outline border-orange-300 hover:bg-orange-300 hover:border-none"
             >
               Sign In With Google
             </button>
             <button
               onClick={handleGithubSignIn}
-              className="btn btn-outline border-orange-500 hover:bg-orange-500 hover:border-none"
+              className="btn btn-outline border-orange-300 hover:bg-orange-300 hover:border-none"
             >
               Sign In With Github
             </button>

@@ -1,4 +1,8 @@
 import React from "react";
+import { FaFilePdf } from "react-icons/fa";
+import { PDFDownloadLink, PDFViewer } from "@react-pdf/renderer";
+import MyDocument from "./MyDocument";
+import Loading from "../shared/Loading/Loading";
 
 const data = [
   {
@@ -32,20 +36,27 @@ const Blog = () => {
   return (
     <div className="px-6 md:px-10 lg:px-16 py-12 bg-base-200">
       <h1 className="font-bold text-4xl my-16 text-center">Blog</h1>
-      {data.map((blog) => (
-        <div
-          tabIndex={0}
-          className="collapse collapse-arrow group"
-          key={blog.idx}
-        >
-          <div className="collapse-title text-black bg-orange-300 rounded-xl text-3xl group-focus:bg-orange-400 group-focus:text-secondary-content">
-            {blog.question}
+      <div className=" flex justify-end pb-8 pr-8">
+        <PDFDownloadLink document={<MyDocument />} fileName="blog.pdf">
+          {({ loading }) => (loading ? <Loading /> : <FaFilePdf size={'40px'} />)}
+        </PDFDownloadLink>
+      </div>
+      <div>
+        {data.map((blog) => (
+          <div
+            tabIndex={0}
+            className="collapse collapse-arrow group"
+            key={blog.id}
+          >
+            <div className="collapse-title text-black bg-orange-300 rounded-xl text-3xl group-focus:bg-orange-400 group-focus:text-secondary-content">
+              {blog.question}
+            </div>
+            <div className="collapse-content mt-2 group-focus:mb-8 bg-orange-400 text-black text-lg group-focus:bg-orange-400 rounded-xl group-focus:text-black group-focus:p-6">
+              {blog.answer}
+            </div>
           </div>
-          <div className="collapse-content mt-2 group-focus:mb-8 bg-orange-400 text-black text-lg group-focus:bg-orange-400 rounded-xl group-focus:text-black group-focus:p-6">
-            {blog.answer}
-          </div>
-        </div>
-      ))}
+        ))}
+      </div>
     </div>
   );
 };

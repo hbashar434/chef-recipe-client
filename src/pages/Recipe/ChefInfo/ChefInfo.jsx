@@ -14,7 +14,7 @@ const ChefInfo = ({ data }) => {
           <p className="py-1 text-xl">Experience : {experience} years</p>
           <p className="py-1 text-xl flex items-center">
             {" "}
-            <FaThumbsUp className="text-orange-500 border-none mr-2 w-6 h-6"></FaThumbsUp>{" "}
+            <FaThumbsUp className="text-orange-300 border-none mr-2 w-6 h-6"></FaThumbsUp>{" "}
             {likes}
           </p>
         </div>

@@ -1,5 +1,5 @@
 import React from "react";
-import {BsBoxArrowInUpRight} from 'react-icons/bs'
+import { BsBoxArrowInUpRight } from "react-icons/bs";
 
 const category = [
   {
@@ -46,7 +46,8 @@ const CategoryRecipe = () => {
               <div className="card bg-black text-gray-300 bg-opacity-75 absolute inset-0 opacity-0 hover:opacity-100 transition-opacity duration-300">
                 <button className="m-auto text-3xl font-semibold ">
                   <span className="flex items-center">
-                    <p className="text-orange-500 mr-2">Visit</p> <BsBoxArrowInUpRight></BsBoxArrowInUpRight>
+                    <p className="text-orange-300 mr-2">Visit</p>{" "}
+                    <BsBoxArrowInUpRight></BsBoxArrowInUpRight>
                   </span>
                 </button>
               </div>

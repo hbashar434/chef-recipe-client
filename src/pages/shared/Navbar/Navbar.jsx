@@ -43,7 +43,7 @@ const Navbar = () => {
                 <NavLink
                   to="/"
                   className={({ isActive }) =>
-                    isActive ? "text-indigo-600" : "text-gray-700"
+                    isActive ? "text-indigo-400" : "text-gray-700"
                   }
                 >
                   Home
@@ -53,7 +53,7 @@ const Navbar = () => {
                 <NavLink
                   to="/blog"
                   className={({ isActive }) =>
-                    isActive ? "text-indigo-600" : "text-gray-700"
+                    isActive ? "text-indigo-400" : "text-gray-700"
                   }
                 >
                   Blog
@@ -74,7 +74,7 @@ const Navbar = () => {
               <NavLink
                 to="/"
                 className={({ isActive }) =>
-                  isActive ? "text-indigo-600" : "text-gray-700"
+                  isActive ? "text-indigo-400" : "text-gray-700"
                 }
               >
                 Home
@@ -84,7 +84,7 @@ const Navbar = () => {
               <NavLink
                 to="/blog"
                 className={({ isActive }) =>
-                  isActive ? "text-indigo-600" : "text-gray-700"
+                  isActive ? "text-indigo-400" : "text-gray-700"
                 }
               >
                 Blog
@@ -102,7 +102,7 @@ const Navbar = () => {
               />
               <Link
                 onClick={handleLogOut}
-                className="btn bg-orange-500 hover:bg-orange-600 border-none text-white text-xs md:text-lg md:font-semibold normal-case"
+                className="btn bg-orange-400 hover:bg-orange-500 border-none text-white text-xs md:text-lg md:font-semibold normal-case"
               >
                 Logout
               </Link>
@@ -110,7 +110,7 @@ const Navbar = () => {
           ) : (
             <Link
               to="/login"
-              className="btn bg-orange-500 hover:bg-orange-600 border-none text-white text-xs md:text-lg md:font-semibold normal-case"
+              className="btn bg-orange-400 hover:bg-orange-500 border-none text-white text-xs md:text-lg md:font-semibold normal-case"
             >
               Login
             </Link>
