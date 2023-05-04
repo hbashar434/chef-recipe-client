@@ -14,22 +14,20 @@ const Register = () => {
     const photo = form.photo.value;
     const email = form.email.value;
     const password = form.password.value;
+    console.log(email, password);
 
     setPasswordError(" ");
     setError(" ");
-
-    if (emailError) {
-      e.target.email.focus();
-      return;
-    } else if (passwordError) {
-      e.target.password.focus();
-      return;
-    }
 
     if (password.length < 6) {
       setPasswordError("Password must be at least 6 characters long");
       return;
     }
+
+    // if (passwordError) {
+    //   e.target.password.focus();
+    //   return;
+    // }
 
     createUser(email, password)
       .then((result) => {
@@ -106,7 +104,9 @@ const Register = () => {
             </div>
             <p className="text-error">{error}</p>
             <div className="form-control mt-6">
-              <button className="btn bg-orange-400 border-none hover:bg-orange-500">Login</button>
+              <button className="btn bg-orange-400 border-none hover:bg-orange-500">
+                Login
+              </button>
             </div>
             <label className="label">
               <Link to="/login" className="label-text-alt link link-hover">
