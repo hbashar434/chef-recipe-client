@@ -3,9 +3,9 @@ import React from "react";
 const Footer = () => {
   return (
     <div>
-      <footer className="footer p-10 md:pl-36 bg-base-200 text-base-content">
+      <footer className="footer p-10 md:pl-36 bg-orange-50 text-base-content">
         <div>
-          <span className="text-2xl font-bold text-gray-400">
+          <span className="text-2xl font-bold text-gray-600">
             The Chef's Table
           </span>
           <p className="text-lg">
@@ -71,7 +71,7 @@ const Footer = () => {
           <a className="link link-hover">Cookie policy</a>
         </div>
       </footer>
-      <footer className="footer px-10 py-4 md:px-36 border-t bg-base-200 text-base-content border-base-300">
+      <footer className="footer px-10 py-4 md:px-36 border-t bg-orange-50 text-base-content border-base-300">
         <div className="items-center grid-flow-col">
           <p>
             The Chef's Table <br />

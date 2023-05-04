@@ -19,7 +19,7 @@ const router = createBrowserRouter([
         element: <HomeLayout></HomeLayout>,
       },
       {
-        path: ":id",
+        path: "/chefs/:id",
         element: (
           <PrivateRoute>
             <Recipe></Recipe>
@@ -33,11 +33,11 @@ const router = createBrowserRouter([
         element: <Blog></Blog>,
       },
       {
-        path: "login",
+        path: "/login",
         element: <Login></Login>,
       },
       {
-        path: "register",
+        path: "/register",
         element: <Register></Register>,
       },
     ],
