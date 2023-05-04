@@ -131,7 +131,7 @@ const Navbar = () => {
               to="/login"
               className="my-btn md:text-lg md:font-semibold normal-case"
             >
-              Login
+              Login Now
             </Link>
           )}
         </div>

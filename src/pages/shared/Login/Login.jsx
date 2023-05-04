@@ -62,36 +62,41 @@ const Login = () => {
         <h1 className="text-5xl font-bold">Please Login now!</h1>
         <div className="text-center lg:text-left"></div>
         <div className="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
-          <form className="card-body" onSubmit={handleLogin}>
-            <div className="form-control">
-              <label className="label">
-                <span className="label-text">Email</span>
-              </label>
-              <input
-                type="email"
-                name="email"
-                required
-                placeholder="email"
-                className="input input-bordered"
-              />
-            </div>
-            <div className="form-control">
-              <label className="label">
-                <span className="label-text">Password</span>
-              </label>
-              <input
-                type="password"
-                name="password"
-                required
-                placeholder="password"
-                className="input input-bordered"
-              />
-            </div>
-            <p className="text-error text-sm">{error}</p>
-            <div className="form-control mt-6">
-              <button className="btn bg-blue-500 border-none hover:bg-blue-500">
-                Login
-              </button>
+          <div className="card-body">
+            <form onSubmit={handleLogin}>
+              <div className="form-control">
+                <label className="label">
+                  <span className="label-text">Email</span>
+                </label>
+                <input
+                  type="email"
+                  name="email"
+                  required
+                  placeholder="email"
+                  className="input input-bordered"
+                />
+              </div>
+              <div className="form-control">
+                <label className="label">
+                  <span className="label-text">Password</span>
+                </label>
+                <input
+                  type="password"
+                  name="password"
+                  required
+                  placeholder="password"
+                  className="input input-bordered"
+                />
+              </div>
+              <p className="text-error text-sm">{error}</p>
+              <div className="form-control mt-6">
+                <button className="btn bg-blue-500 border-none hover:bg-blue-500">
+                  Login
+                </button>
+              </div>
+            </form>
+            <div className="flex flex-col w-full border-opacity-50">
+              <div className="divider">OR</div>
             </div>
             <button
               onClick={handleGoogleSignIn}
@@ -105,7 +110,7 @@ const Login = () => {
             </button>
             <button
               onClick={handleGithubSignIn}
-              className="btn btn-outline border-blue-500 hover:bg-blue-500 hover:border-none"
+              className="btn btn-outline border-blue-500 hover:bg-blue-500 hover:border-none mt-3"
             >
               {" "}
               <span className="mr-2">
@@ -121,7 +126,7 @@ const Login = () => {
                 New to Chef's Table? Create An Account
               </Link>
             </label>
-          </form>
+          </div>
         </div>
       </div>
     </div>

@@ -15,18 +15,19 @@ const ChefDetails = ({ singleChef }) => {
       </figure>
       <div className="card-body">
         <h2 className="card-title">{name}</h2>
-        <p >Experience : {experience} years</p>
+        <p>Experience : {experience} years</p>
         <p>Recipes : {number_of_recipes} items</p>
         <p className="flex items-center text-blue-800 cursor-pointer">
           {" "}
-          <FaThumbsUp size={'20px'} className="text-blue-500 mr-2"></FaThumbsUp>{" "}
+          <FaThumbsUp
+            size={"20px"}
+            className="text-blue-500 mr-2"
+          ></FaThumbsUp>{" "}
           {likes}
         </p>
         <div className="card-actions">
           <Link to={`/chefs/${_id}`}>
-            <button className="my-btn normal-case">
-              View Recipes
-            </button>
+            <button className="my-btn normal-case">View Recipes</button>
           </Link>
         </div>
       </div>
