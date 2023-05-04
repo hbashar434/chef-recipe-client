@@ -9,7 +9,7 @@ const ChefDetails = ({ singleChef }) => {
   return (
     <div className="card card-side bg-base-100 shadow-xl">
       <figure>
-        <LazyLoad offset={300} once>
+        <LazyLoad offset={300}>
           <img className="w-48 h-64" src={picture} alt="chef Man" />
         </LazyLoad>
       </figure>

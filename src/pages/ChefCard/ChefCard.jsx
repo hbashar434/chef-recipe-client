@@ -18,14 +18,22 @@ const ChefCard = () => {
     return <Loading></Loading>;
   }
   return (
-    <div className="bg-base-200" >
-      <div className="px-8 py-12 md:py-32 grid justify-center gap-6 md:grid-cols-2 lg:grid-cols-3">
-        {chef.map((singleChef) => (
-          <ChefDetails
-            key={singleChef._id}
-            singleChef={singleChef}
-          ></ChefDetails>
-        ))}
+    <div className="bg-base-200">
+      <div className="px-8 py-12 md:py-24">
+        <h1 className="text-4xl font-bold text-blue-500 text-center">
+          Meet Our Chef's
+        </h1>
+        <h3 className="text-2xl font-bold text-blue-500 text-center mb-8">
+          The Culinary Maestro: An Introduction to Our Expert Chef
+        </h3>
+        <div className="grid justify-center gap-6 md:grid-cols-2 lg:grid-cols-3">
+          {chef.map((singleChef) => (
+            <ChefDetails
+              key={singleChef._id}
+              singleChef={singleChef}
+            ></ChefDetails>
+          ))}
+        </div>
       </div>
     </div>
   );
