@@ -104,12 +104,13 @@ const Register = () => {
                 Login
               </button>
             </div>
-            <label className="label">
+            <label>
+              Already have an account?
               <Link
                 to="/login"
-                className="label-text-alt link link-hover text-sm font-semibold"
+                className="label-text-alt underline pl-2 text-lg font-semibold hover:text-blue-600"
               >
-                Already have an account? Please Login
+                Please Login
               </Link>
             </label>
           </form>

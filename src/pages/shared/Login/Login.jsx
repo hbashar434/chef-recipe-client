@@ -118,12 +118,13 @@ const Login = () => {
               </span>
               Sign In With Github
             </button>
-            <label className="label">
+            <label>
+              New to Chef's Table?
               <Link
                 to="/register"
-                className="label-text-alt link link-hover text-sm font-semibold"
+                className="label-text-alt underline pl-2 text-lg font-semibold hover:text-blue-600"
               >
-                New to Chef's Table? Create An Account
+                Create an Account
               </Link>
             </label>
           </div>
