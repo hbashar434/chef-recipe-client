@@ -8,14 +8,14 @@ const ChefDetails = ({ singleChef }) => {
   const { _id, picture, name, experience, number_of_recipes, likes } =
     singleChef;
   return (
-    <div className="card card-side bg-base-100 shadow-xl overflow-hidden">
+    <div className="card card-side bg-base-100 shadow-md overflow-hidden">
       <figure>
         <LazyLoadImage
           effect="blur"
           delayTime={600}
           src={picture}
           alt="chef Man"
-          className=" w-60 h-full object-cover"
+          className=" w-64 h-full object-cover"
         />
       </figure>
       <div className="card-body">
