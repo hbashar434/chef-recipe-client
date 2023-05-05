@@ -3,14 +3,13 @@ import React from "react";
 const Footer = () => {
   return (
     <div>
-      <footer className="footer p-10 md:pl-36 bg-orange-50 text-base-content">
+      <footer className="footer p-10 md:pl-36 pt-24 bg-orange-50 text-base-content">
         <div>
           <span className="text-2xl font-bold text-gray-600">
             The Chef's Table
           </span>
           <p className="text-lg">
-            Get your
-            <br /> Favorite Recipe.
+            Get Your Favorite Recipe.
           </p>
           <div className="mt-4 md:place-self-center md:justify-self-start cursor-pointer">
             <div className="grid grid-flow-col gap-4">

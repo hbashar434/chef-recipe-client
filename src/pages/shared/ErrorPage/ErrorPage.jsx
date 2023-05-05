@@ -4,9 +4,9 @@ import { Link, useRouteError } from "react-router-dom";
 const ErrorPage = () => {
   const { error, status } = useRouteError();
   return (
-    <div className="grid justify-center">
+    <div className="grid justify-center md:mt-24">
       <img
-        className="max-h-[calc(100vh-136px)]"
+        className="h-96"
         src={errorImage}
         alt="error image"
       />

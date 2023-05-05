@@ -26,7 +26,7 @@ const ChefCard = () => {
         <h3 className="text-2xl font-bold text-blue-500 text-center mb-8">
           The Culinary Maestro: An Introduction to Our Expert Chef
         </h3>
-        <div className="grid justify-center gap-6 md:grid-cols-2 lg:grid-cols-3">
+        <div className="grid justify-center md:mx-16 gap-6 md:grid-cols-2 lg:grid-cols-3">
           {chef.map((singleChef) => (
             <ChefDetails
               key={singleChef._id}

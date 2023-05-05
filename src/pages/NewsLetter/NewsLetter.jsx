@@ -3,7 +3,7 @@ import newsletter from "../../assets/newsletter.avif";
 const NewsLetter = () => {
   return (
     <div
-      className=" my-24 flex items-center lg:h-screen bg-no-repeat bg-cover"
+      className="flex items-center lg:min-h-[calc(100vh-120px)] bg-no-repeat bg-cover"
       style={{ backgroundImage: `url(${newsletter})` }}
     >
       <div className="text-white ml-6 md:ml-24 my-6">

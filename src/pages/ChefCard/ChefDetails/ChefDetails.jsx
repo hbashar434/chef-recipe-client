@@ -7,16 +7,20 @@ const ChefDetails = ({ singleChef }) => {
   const { _id, picture, name, experience, number_of_recipes, likes } =
     singleChef;
   return (
-    <div className="card card-side bg-base-100 shadow-xl">
+    <div className="card card-side bg-base-100 shadow-xl overflow-hidden">
       <figure>
         <LazyLoad offset={300}>
-          <img className="w-48 h-64" src={picture} alt="chef Man" />
+          <img
+            className=" w-48 h-72 object-cover"
+            src={picture}
+            alt="chef Man"
+          />
         </LazyLoad>
       </figure>
       <div className="card-body">
         <h2 className="card-title">{name}</h2>
-        <p>Experience : {experience} years</p>
-        <p>Recipes : {number_of_recipes} items</p>
+        <p>{experience} years of experience</p>
+        <p>{number_of_recipes} items in recipe</p>
         <p className="flex items-center text-blue-800 cursor-pointer">
           {" "}
           <FaThumbsUp
