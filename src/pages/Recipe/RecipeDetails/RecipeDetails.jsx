@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import toast, { Toaster } from "react-hot-toast";
 import { Rating } from "@smastrom/react-rating";
 import "@smastrom/react-rating/style.css";
+import { LazyLoadImage } from "react-lazy-load-image-component";
+import "react-lazy-load-image-component/src/effects/blur.css";
 
 const RecipeDetails = ({ recipes }) => {
   const { recipe_name, image, ingredients, cooking_method, rating } = recipes;
@@ -32,26 +34,25 @@ const RecipeDetails = ({ recipes }) => {
   };
 
   return (
-    <div className="card bg-base-100 shadow-xl my-16 p-8">
+    <div className="card bg-yellow-50 shadow-md my-8 mx-4 p-8">
       <div className="card lg:card-side">
-        <figure className="p-10">
-          <img
-            src={image}
-            alt="Food Image"
-            className=" rounded-full w-72 h-72"
-          />
+        <figure className="p-6 shadow-lg bg-orange-100">
+        <LazyLoadImage
+          effect="blur"
+          delayTime={300}
+          src={image}
+          alt="recipe"
+          className="w-64 h-full object-cover rounded-md"
+        />
         </figure>
         <div className="grid items-center">
           <div className="card-body">
             <h2 className="card-title text-3xl">Recipe name : {recipe_name}</h2>
-            <div className="flex mt-4">
+            <div className="flex flex-wrap mt-4">
               <p className="text-3xl mr-8">Ingredients: </p>
               <div>
                 {ingredients?.map((ing, idx) => (
-                  <button
-                    className="my-btn-blue"
-                    key={idx}
-                  >
+                  <button className="my-btn-yellow mt-1" key={idx}>
                     {ing}
                   </button>
                 ))}
@@ -69,7 +70,7 @@ const RecipeDetails = ({ recipes }) => {
           </div>
         </div>
       </div>
-      <div className="text-lg font-semibold">
+      <div className="text-lg font-semibold mt-4">
         {" "}
         <span className="text-2xl mr-2">How to Cook :</span> {cooking_method}
       </div>

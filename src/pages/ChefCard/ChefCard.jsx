@@ -18,10 +18,10 @@ const ChefCard = () => {
     return <Loading></Loading>;
   }
   return (
-    <div className="bg-base-200">
+    <div className="bg-base-100">
       <div className="px-8 py-12 md:py-24">
         <h1 className="text-4xl font-bold text-blue-500 text-center">
-          Meet Our Chef's
+          Meet Our Chef&apos;s
         </h1>
         <h3 className="text-2xl font-bold text-blue-500 text-center mb-8">
           The Culinary Maestro: An Introduction to Our Expert Chef

@@ -3,9 +3,25 @@
 @tailwind utilities;
 
 .my-btn {
-  @apply bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600;
+  @apply bg-gradient-to-r from-pink-500 to-orange-400 hover:from-orange-500 hover:to-pink-400 text-white px-4 py-2 rounded-md font-bold transition duration-300 ease-in-out
 }
 
+.my-text {
+  background: linear-gradient(to right, #FFD700, #FFA500);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+
+
+.my-bg {
+  @apply bg-yellow-100;
+}
+.my-text-gr {
+  background: linear-gradient(45deg, #ffa07a, #ff4500);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
 .my-btn-blue {
   @apply bg-blue-200 text-blue-800 rounded-full py-1 px-3 mr-2 mb-2;
 }
@@ -13,7 +29,7 @@
   @apply bg-green-200 text-green-800 rounded-full py-1 px-3 mr-2 mb-2;
 }
 .my-btn-yellow {
-  @apply bg-yellow-200 text-yellow-800 rounded-full py-1 px-3 mr-2 mb-2;
+  @apply bg-yellow-100 text-yellow-600 rounded-full py-1 px-3 mr-2 mb-2;
 }
 .my-btn-orange {
   @apply bg-orange-200 text-orange-800 rounded-full py-1 px-3 mr-2 mb-2;

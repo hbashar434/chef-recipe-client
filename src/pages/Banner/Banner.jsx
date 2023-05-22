@@ -1,28 +1,26 @@
 import React from "react";
-import banner from "../../assets/banner.avif";
+import { Link } from "react-router-dom";
+import Lottie from "lottie-react";
+import cooking from "../../assets/cooking.json";
 const Banner = () => {
   return (
-    <div
-      className="hero min-h-[calc(100vh-64px)]"
-      style={{
-        backgroundImage: `url(${banner})`,
-      }}
-    >
-      <div className="hero-overlay bg-opacity-10"></div>
-      <div className="hero-content text-neutral-content">
-        <div>
-          <h1 className="mb-5 text-gray-50 font-bold">
-            <p className="text-4xl">
-              Browse the latest recipes and popular recipes.
-            </p>
-            <p className="text-3xl">
-              and Learn how to make your favorite dishes.
-            </p>
+    <div className="lg:flex items-center py-4 md:py-10 px-4">
+      <div className="w-9/12 pb-4 md:pb-24">
+        <Lottie animationData={cooking} loop={true} />
+      </div>
+      <div className="w-9/12">
+        <div className=" text-5xl font-bold grid gap-3">
+          <h1>One Step</h1>
+          <h1>Closer To Your</h1>
+          <h1 className="bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 text-transparent bg-clip-text">
+            Dream Job
           </h1>
-          <button className="my-btn font-semibold normal-case">
-            Book a Table
-          </button>
         </div>
+        <p className="mt-8">
+          Explore thousands of job opportunities with all the information you
+          need. Its your future. Come find it. Manage all your job application
+          from start to finish.
+        </p>
       </div>
     </div>
   );

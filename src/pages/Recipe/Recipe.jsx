@@ -10,7 +10,7 @@ const Recipe = () => {
   return (
     <div>
       <ChefInfo data={data}></ChefInfo>
-      <div className="my-24 md:p-24 bg-base-200">
+      <div className="bg-base-100">
         {recipe.map((recipes, idx) => (
           <RecipeDetails key={idx} recipes={recipes}></RecipeDetails>
         ))}

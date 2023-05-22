@@ -5,7 +5,7 @@ import MyDocument from "./MyDocument";
 
 const Blog = () => {
   return (
-    <div className="lg:px-48 py-12 bg-base-200">
+    <div className="lg:px-48 py-12 bg-base-100">
       <div className="flex justify-end pb-8 pr-8 mt-4">
         <PDFDownloadLink document={<MyDocument />} fileName="blog.pdf">
           {({ loading }) =>

@@ -36,13 +36,13 @@ const Navbar = () => {
             </label>
             <ul
               tabIndex={0}
-              className="menu-compact dropdown-content mt-1 p-2 shadow  bg-orange-100 rounded-box w-32"
+              className="menu-compact dropdown-content mt-1 p-2 shadow  bg-yellow-100 rounded-box w-32"
             >
               <li>
                 <NavLink
                   to="/"
                   className={({ isActive }) =>
-                    isActive ? "text-blue-500" : "text-gray-700"
+                    isActive ? "my-text-gr" : "text-gray-700"
                   }
                 >
                   Home
@@ -52,7 +52,7 @@ const Navbar = () => {
                 <NavLink
                   to="/blog"
                   className={({ isActive }) =>
-                    isActive ? "text-blue-500" : "text-gray-700"
+                    isActive ? "my-text-gr" : "text-gray-700"
                   }
                 >
                   Blog
@@ -62,7 +62,7 @@ const Navbar = () => {
                 <NavLink
                   to="/about"
                   className={({ isActive }) =>
-                    isActive ? "text-blue-500" : "text-gray-700"
+                    isActive ? "my-text-gr" : "text-gray-700"
                   }
                 >
                   About
@@ -72,9 +72,9 @@ const Navbar = () => {
           </div>
           <Link
             to="/"
-            className="normal-case text-blue-500 border-none text-lg md:text-3xl font-bold"
+            className="normal-case my-text-gr text-lg md:text-3xl font-bold"
           >
-            The Chef's Table
+            The Chef&apos;s Table
           </Link>
         </div>
         <div className="navbar-center hidden lg:flex">
@@ -83,7 +83,7 @@ const Navbar = () => {
               <NavLink
                 to="/"
                 className={({ isActive }) =>
-                  isActive ? "text-blue-500" : "text-gray-600"
+                  isActive ? "my-text-gr" : "text-gray-600"
                 }
               >
                 Home
@@ -93,7 +93,7 @@ const Navbar = () => {
               <NavLink
                 to="/blog"
                 className={({ isActive }) =>
-                  isActive ? "text-blue-500" : "text-gray-600"
+                  isActive ? "my-text-gr" : "text-gray-600"
                 }
               >
                 Blog
@@ -103,7 +103,7 @@ const Navbar = () => {
               <NavLink
                 to="/about"
                 className={({ isActive }) =>
-                  isActive ? "text-blue-500" : "text-gray-600"
+                  isActive ? "my-text-gr" : "text-gray-600"
                 }
               >
                 About
