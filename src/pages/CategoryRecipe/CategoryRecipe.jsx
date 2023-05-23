@@ -26,10 +26,10 @@ const CategoryRecipe = () => {
       <h1 className="text-5xl text-center font-bold pt-12 pb-6 text-emerald-800">
         Recipes By Category
       </h1>
-      <div className="grid justify-center lg:grid-cols-4 gap-4 px-12">
+      <div className="grid justify-center lg:grid-cols-4 gap-4 px-4 md:px-8">
         {category.map((ct, idx) => (
           <div key={idx} className="pt-8 lg:flex gap-6">
-            <div className="card w-96 bg-base-100 shadow-xl relative transition duration-300">
+            <div className="card w-full bg-base-100 shadow-xl relative transition duration-300">
               <figure className="px-10 pt-10 overflow-hidden">
                 <img
                   src={ct.image}
@@ -38,7 +38,7 @@ const CategoryRecipe = () => {
                 />
               </figure>
               <div className="card-body items-center text-center">
-                <h2 className="card-title text-5xl text-emerald-700">
+                <h2 className="card-title text-3xl text-emerald-700">
                   {ct.name}
                 </h2>
               </div>

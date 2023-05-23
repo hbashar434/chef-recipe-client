@@ -19,11 +19,11 @@ const ChefCard = () => {
   }
   return (
     <div className="bg-base-100">
-      <div className="px-8 py-12 md:py-24">
-        <h1 className="text-4xl font-bold text-blue-500 text-center">
+      <div className="px-8 py-6 md:py-12">
+        <h1 className="text-4xl font-bold my-text text-center mb-4">
           Meet Our Chef&apos;s
         </h1>
-        <h3 className="text-2xl font-bold text-blue-500 text-center mb-8">
+        <h3 className="text-2xl font-bold my-text text-center mb-8 md:mb-16">
           The Culinary Maestro: An Introduction to Our Expert Chef
         </h3>
         <div className="grid justify-center md:mx-16 gap-6 md:grid-cols-2 lg:grid-cols-3">

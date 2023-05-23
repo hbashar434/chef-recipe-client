@@ -7,7 +7,7 @@
 }
 
 .my-text {
-  background: linear-gradient(to right, #FFD700, #FFA500);
+  background: linear-gradient(45deg, #fff27a, #ff4500);
   background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -15,7 +15,7 @@
 
 
 .my-bg {
-  @apply bg-yellow-100;
+  @apply bg-orange-100;
 }
 .my-text-gr {
   background: linear-gradient(45deg, #ffa07a, #ff4500);

@@ -1,15 +1,32 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { FaThumbsUp } from "react-icons/fa";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const ChefInfo = ({ data }) => {
   const { picture, name, bio, experience, number_of_recipes, likes } = data;
+
+  useEffect(() => {
+    AOS.init({
+      duration: 1000,
+      once: true,
+    });
+  }, []);
+
   return (
     <div className="flex justify-center py-16">
       <div className="md:flex flex-row-reverse gap-16 justify-center items-center w-10/12">
-        <figure className="md:w-9/12 pb-8 md:pb-0">
-          <img src={picture} className="rounded-lg shadow-2xl" />
+        <figure className="pb-8 md:pb-0 md:w-5/12">
+          <img
+            src={picture}
+            className="rounded-lg shadow-lg"
+            data-aos="fade-up-right"
+            data-aos-offset="200"
+            data-aos-easing="linear"
+            data-aos-duration="1500"
+          />
         </figure>
-        <div>
+        <div className="md:w-7/12">
           <h1 className="text-5xl font-bold">{name}</h1>
           <p className="py-3 text-2xl font-semibold">{bio}</p>
           <p>

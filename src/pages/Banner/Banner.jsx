@@ -1,12 +1,11 @@
 import React from "react";
-import { Link } from "react-router-dom";
 import Lottie from "lottie-react";
 import cooking from "../../assets/cooking.json";
 const Banner = () => {
   return (
-    <div className="lg:flex items-center py-4 md:py-10 px-4">
-      <div className="w-9/12 pb-4 md:pb-24">
-        <Lottie animationData={cooking} loop={true} />
+    <div className="md:flex md:min-h-screen items-center py-4 md:py-10 px-4">
+      <div className="w-9/12 pb-4">
+        <Lottie className="h-60" animationData={cooking} loop={true} />
       </div>
       <div className="w-9/12">
         <div className=" text-5xl font-bold grid gap-3">

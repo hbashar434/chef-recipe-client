@@ -8,6 +8,7 @@ import "react-lazy-load-image-component/src/effects/blur.css";
 const RecipeDetails = ({ recipes }) => {
   const { recipe_name, image, ingredients, cooking_method, rating } = recipes;
   const [favorite, setFavorite] = useState(true);
+
   const handleFavorite = () => {
     setFavorite(false);
     toast.success("The Recipe is your Favorite", {
@@ -34,16 +35,16 @@ const RecipeDetails = ({ recipes }) => {
   };
 
   return (
-    <div className="card bg-yellow-50 shadow-md my-8 mx-4 p-8">
+    <div className="card bg-yellow-50 border-y-2 hover:shadow-md my-8 mx-4 p-8">
       <div className="card lg:card-side">
-        <figure className="p-6 shadow-lg bg-orange-100">
-        <LazyLoadImage
-          effect="blur"
-          delayTime={300}
-          src={image}
-          alt="recipe"
-          className="w-64 h-full object-cover rounded-md"
-        />
+        <figure className="p-4 hover:shadow-lg bg-orange-50">
+          <LazyLoadImage
+            effect="blur"
+            delayTime={100}
+            src={image}
+            alt="recipe"
+            className="w-64 h-full object-cover rounded-md"
+          />
         </figure>
         <div className="grid items-center">
           <div className="card-body">

@@ -13,7 +13,7 @@ const Navbar = () => {
       });
   };
 
-  return (
+  return ( 
     <div className="mx-8 md:mx-16 lg:mx-24">
       <div className="navbar">
         <div className="navbar-start">
