@@ -90,7 +90,7 @@ const Login = () => {
               </div>
               <p className="text-error text-sm">{error}</p>
               <div className="form-control mt-6">
-                <button className="btn bg-blue-500 border-none hover:bg-blue-500">
+                <button className="btn bg-orange-400 border-none hover:bg-orange-500">
                   Login
                 </button>
               </div>
@@ -100,7 +100,7 @@ const Login = () => {
             </div>
             <button
               onClick={handleGoogleSignIn}
-              className="btn btn-outline border-blue-500 hover:bg-blue-500 hover:border-none"
+              className="btn btn-outline border-orange-500 hover:bg-orange-500 hover:border-none"
             >
               {" "}
               <span className="mr-2">
@@ -110,7 +110,7 @@ const Login = () => {
             </button>
             <button
               onClick={handleGithubSignIn}
-              className="btn btn-outline border-blue-500 hover:bg-blue-500 hover:border-none mt-3"
+              className="btn btn-outline border-orange-500 hover:bg-orange-500 hover:border-none mt-3"
             >
               {" "}
               <span className="mr-2">
@@ -119,10 +119,10 @@ const Login = () => {
               Sign In With Github
             </button>
             <label>
-              New to Chef's Table?
+              New to Chef&apos;s Table?
               <Link
                 to="/register"
-                className="label-text-alt underline pl-2 text-lg font-semibold hover:text-blue-600"
+                className="label-text-alt underline pl-2 text-lg font-semibold hover:text-orange-600"
               >
                 Create an Account
               </Link>

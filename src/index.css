@@ -7,7 +7,7 @@
 }
 
 .my-text {
-  background: linear-gradient(45deg, #fff27a, #ff4500);
+  background: linear-gradient(45deg, #f36b35, #ff4500);
   background-clip: text;
   -webkit-text-fill-color: transparent;
 }

@@ -99,8 +99,8 @@ const Register = () => {
               <p className=" text-error mt-2">{passwordError}</p>
             </div>
             <p className="text-error">{error}</p>
-            <div className="form-control mt-6">
-              <button className="btn bg-blue-500 border-none hover:bg-blue-500">
+            <div className="form-control">
+              <button className="btn bg-orange-400 border-none hover:bg-orange-500">
                 Login
               </button>
             </div>
@@ -108,7 +108,7 @@ const Register = () => {
               Already have an account?
               <Link
                 to="/login"
-                className="label-text-alt underline pl-2 text-lg font-semibold hover:text-blue-600"
+                className="label-text-alt underline pl-2 text-lg font-semibold hover:text-orange-600"
               >
                 Please Login
               </Link>
