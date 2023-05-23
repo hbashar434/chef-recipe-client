@@ -29,7 +29,7 @@ const CategoryRecipe = () => {
       <div className="grid justify-center lg:grid-cols-4 gap-4 px-4 md:px-8">
         {category.map((ct, idx) => (
           <div key={idx} className="pt-8 lg:flex gap-6">
-            <div className="card w-full bg-base-100 shadow-xl relative transition duration-300">
+            <div className="card w-72 md:w-full bg-base-100 shadow-md relative transition duration-300">
               <figure className="px-10 pt-10 overflow-hidden">
                 <img
                   src={ct.image}

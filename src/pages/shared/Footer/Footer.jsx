@@ -3,14 +3,12 @@ import React from "react";
 const Footer = () => {
   return (
     <div>
-      <footer className="footer p-10 md:pl-36 pt-24 bg-orange-50 text-base-content">
+      <footer className="footer p-10 md:pl-36 pt-24 my-bg text-base-content">
         <div>
           <span className="text-2xl font-bold text-gray-600">
-            The Chef's Table
+            The Chef&apos;s Table
           </span>
-          <p className="text-lg">
-            Get Your Favorite Recipe.
-          </p>
+          <p className="text-lg">Get Your Favorite Recipe.</p>
           <div className="mt-4 md:place-self-center md:justify-self-start cursor-pointer">
             <div className="grid grid-flow-col gap-4">
               <a>
@@ -73,14 +71,14 @@ const Footer = () => {
       <footer className="footer px-10 py-4 md:px-36 border-t bg-orange-50 text-base-content border-base-300">
         <div className="items-center grid-flow-col">
           <p>
-            The Chef's Table <br />
+            The Chef&apos;s Table <br />
             Providing reliable services since 2017
           </p>
         </div>
         <div className="md:place-self-center md:justify-self-end">
           <p>
-            Powered By The Chef's Table <br />
-            @2023 The Chef's Table. All Rights Reserved
+            Powered By The Chef&apos;s Table <br />
+            @2023 The Chef&apos;s Table. All Rights Reserved
           </p>
         </div>
       </footer>

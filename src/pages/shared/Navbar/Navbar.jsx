@@ -13,8 +13,8 @@ const Navbar = () => {
       });
   };
 
-  return ( 
-    <div className="mx-8 md:mx-16 lg:mx-24">
+  return (
+    <div className="mx-4 md:mx-8">
       <div className="navbar">
         <div className="navbar-start">
           <div className="dropdown">
@@ -36,7 +36,7 @@ const Navbar = () => {
             </label>
             <ul
               tabIndex={0}
-              className="menu-compact dropdown-content mt-1 p-2 shadow  bg-yellow-100 rounded-box w-32"
+              className="menu-compact dropdown-content mt-1 p-2 shadow  my-bg rounded-box w-32"
             >
               <li>
                 <NavLink

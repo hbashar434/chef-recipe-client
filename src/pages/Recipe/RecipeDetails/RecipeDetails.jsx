@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import toast, { Toaster } from "react-hot-toast";
 import { Rating } from "@smastrom/react-rating";
+import { MdFavorite } from "react-icons/md";
 import "@smastrom/react-rating/style.css";
 import { LazyLoadImage } from "react-lazy-load-image-component";
 import "react-lazy-load-image-component/src/effects/blur.css";
@@ -11,9 +12,21 @@ const RecipeDetails = ({ recipes }) => {
 
   const handleFavorite = () => {
     setFavorite(false);
-    toast.success("The Recipe is your Favorite", {
+    toast.success("Added in favorite list", {
       style: {
-        backgroundColor: "#05BFDB",
+        backgroundColor: "#F4B183",
+        height: "6rem",
+        width: "20rem",
+        fontSize: "20px",
+        color: "white",
+      },
+    });
+  };
+  const handleUnFavorite = () => {
+    setFavorite(true);
+    toast.success("Remove from favorite list", {
+      style: {
+        backgroundColor: "#F4B183",
         height: "6rem",
         width: "20rem",
         fontSize: "20px",
@@ -36,6 +49,18 @@ const RecipeDetails = ({ recipes }) => {
 
   return (
     <div className="card bg-yellow-50 border-y-2 hover:shadow-md my-8 mx-4 p-8">
+      <div className=" flex justify-end">
+        {!favorite ? (
+          <MdFavorite
+            size={40}
+            color="red"
+            className="cursor-pointer"
+            onClick={handleUnFavorite}
+          />
+        ) : (
+          ""
+        )}
+      </div>
       <div className="card lg:card-side">
         <figure className="p-4 hover:shadow-lg bg-orange-50">
           <LazyLoadImage
@@ -79,7 +104,7 @@ const RecipeDetails = ({ recipes }) => {
         <button
           onClick={handleFavorite}
           className={`btn border-none text-lg normal-case ${
-            !favorite ? "btn-disabled" : "my-btn"
+            favorite ? "my-btn" : "hidden"
           }`}
         >
           Add to Favorite
