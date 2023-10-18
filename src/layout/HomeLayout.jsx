@@ -4,6 +4,7 @@ import ChefCard from "../pages/ChefCard/ChefCard";
 import CategoryRecipe from "../pages/CategoryRecipe/CategoryRecipe";
 import NewsLetter from "../pages/NewsLetter/NewsLetter";
 import FeaturedRecipes from "../pages/FeaturedRecipes/FeaturedRecipes";
+import CookingTips from "../pages/CookingTips/CookingTips";
 
 const HomeLayout = () => {
   return (
@@ -12,6 +13,7 @@ const HomeLayout = () => {
       <ChefCard></ChefCard>
       <CategoryRecipe></CategoryRecipe>
       <FeaturedRecipes></FeaturedRecipes>
+      <CookingTips></CookingTips>
       <NewsLetter></NewsLetter>
     </div>
   );
