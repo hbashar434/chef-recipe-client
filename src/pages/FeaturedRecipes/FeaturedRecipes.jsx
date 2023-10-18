@@ -32,7 +32,7 @@ const FeaturedRecipes = () => {
   return (
     <div className="bg-yellow-100 py-10">
       <div className="container mx-auto px-4">
-        <h2 className="my-title">Featured Recipes</h2>
+        <h2 className="my-title text-yellow-500">Featured Recipes</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
           {recipesData.map((recipe) => (
             <div

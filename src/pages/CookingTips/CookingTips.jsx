@@ -40,7 +40,7 @@ const CookingTips = () => {
   return (
     <div className="py-10 md:py-24">
       <div className="container mx-auto px-4">
-        <h2 className="text-2xl text-center md:text-4xl font-bold text-amber-700 mb-6">
+        <h2 className=" text-amber-500 my-title">
           Cooking Tips and Tricks
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
@@ -55,7 +55,7 @@ const CookingTips = () => {
               
               <button
                 onClick={() => openModal(tip)}
-                className="text-orange-500 hover:underline mt-2"
+                className="text-orange-500 hover:underline mt-2 my-btn"
               >
                 Read More
               </button>
@@ -73,7 +73,7 @@ const CookingTips = () => {
             <p className="text-green-700 text-2xl font-bold">{selectedTip.description}</p>
             <button
               onClick={closeModal}
-              className="text-orange-500 hover:underline mt-2"
+              className="text-orange-500 hover:underline mt-2 my-btn"
             >
               Close
             </button>

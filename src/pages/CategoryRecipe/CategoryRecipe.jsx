@@ -23,7 +23,7 @@ const category = [
 const CategoryRecipe = () => {
   return (
     <div className="bg-base-100 pb-24">
-      <h1 className="my-title pt-12">
+      <h1 className="my-title text-emerald-800 pt-12">
         Recipes By Category
       </h1>
       <div className="grid justify-center lg:grid-cols-4 gap-4 px-4 md:px-8">
