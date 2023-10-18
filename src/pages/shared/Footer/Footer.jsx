@@ -4,7 +4,7 @@ const Footer = () => {
   return (
     <div>
       <footer className="footer p-10 md:pl-36 pt-24 my-bg text-base-content">
-        <div>
+        <div className="container mx-auto">
           <span className="text-2xl font-bold text-gray-600">
             The Chef&apos;s Table
           </span>

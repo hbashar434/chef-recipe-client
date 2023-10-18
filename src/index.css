@@ -12,6 +12,9 @@
   -webkit-text-fill-color: transparent;
 }
 
+.my-title{
+  @apply text-2xl lg:text-5xl text-center font-bold pb-6 text-emerald-800
+}
 
 
 .my-bg {

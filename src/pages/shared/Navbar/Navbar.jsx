@@ -14,7 +14,7 @@ const Navbar = () => {
   };
 
   return (
-    <div className="mx-4 md:mx-8">
+    <div className="container mx-auto">
       <div className="navbar">
         <div className="navbar-start">
           <div className="dropdown">

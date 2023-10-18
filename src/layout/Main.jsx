@@ -6,11 +6,11 @@ import Footer from "../pages/shared/Footer/Footer";
 
 const Main = () => {
   return (
-    <div className="container mx-auto">
-      <div className="my-bg">
+    <div className="">
+      <div className="my-bg drop-shadow">
         <Navbar></Navbar>
       </div>
-      <div className="min-h-[calc(100vh-50px)]">
+      <div className="min-h-[calc(100vh-50px)] max-w-[1440px]">
         <Outlet></Outlet>
       </div>
       <Footer></Footer>
