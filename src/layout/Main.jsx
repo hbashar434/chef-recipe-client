@@ -10,7 +10,7 @@ const Main = () => {
       <div className="my-bg drop-shadow">
         <Navbar></Navbar>
       </div>
-      <div className="min-h-[calc(100vh-50px)] max-w-[1440px]">
+      <div className="min-h-[calc(100vh-50px)] max-w-[1440px] mx-auto">
         <Outlet></Outlet>
       </div>
       <Footer></Footer>
